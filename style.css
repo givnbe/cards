@@ -1,3 +1,5 @@
 body {
     background-image: url("board.jpg");
+    background-position: center;
+    background-size: cover;
 }
