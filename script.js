@@ -1,9 +1,8 @@
 // 登録済みテキスト
 const textList = [
-    "Apple", "Banana", "Cherry", "Date", "Elderberry",
-    "Fig", "Grape", "Honeydew", "Kiwi", "Lemon",
-    "Mango", "Orange", "Peach", "Pear", "Plum",
-    "Strawberry", "Watermelon"
+    "今日", "昨日", "買う", "欲しい", "高い", "ので", "て", "た", "で", "を", "れ／られ",
+    "なぜか", "人", "ときおり", "は", "の", "が", "する", "本", "経済", "商い", "書斎", "物品",
+    "道路", "右往左往"
 ];
 
 const button = document.getElementById("drawButton");

@@ -13,9 +13,9 @@ body {
 /* 上のボタン */
 #drawButton {
     margin-top: 20px;
-    width: 120px;
+    width: 360px;
     height: 60px;
-    font-size: 16px;
+    font-size: 36px;
     cursor: pointer;
 }
 
@@ -35,7 +35,15 @@ body {
 }
 
 .textBox {
+    width: 120px;
+    height: 180px;
     border: 2px solid #ff5959;
+    background-color: #fff;
     padding: 10px;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;      /* 縦方向の中央 */
+    justify-content: center;  /* 横方向の中央 */
     text-align: center;
+    font-size: 40px;
 }
