@@ -14,10 +14,10 @@ const adjectives_i = [
 ];
 
 const adjectives_na = [
-  "きれい","静か","おだやか","便利","華やか",
-  "平和","危険","簡単","複雑","大切",
-  "重要","有名","普通","特別","自由",
-  "同じ","まじめ","元気","健康","親切"
+  "静か(な)(だ)","便利(な)(だ)","華やか(な)(だ)",
+  "平和(な)(だ)","危険(な)(だ)","簡単(な)(だ)","複雑(な)(だ)","大切(な)(だ)",
+  "重要(な)(だ)","有名(な)(だ)","普通(な)(だ)","特別(な)(だ)","自由(な)(だ)",
+  "同じ(な)(だ)","まじめ(な)(だ)","元気(な)(だ)","健康(な)(だ)","親切(な)(だ)"
 ];
 
 const nouns = [
@@ -41,16 +41,17 @@ const adnominals = [
   "この","その","あの","どの",
   "こんな","そんな","あんな","どんな",
   "大きな","小さな",
-  "色々な","様々な",
-  "ほんの","一定の",
-  "特別な","一般的な","あらゆる",
-  "主な","基本的な",
-  "新たな"
+  "ほんの","あらゆる",
+  "主な","新たな"
 ];
 
-const particles = [
-  "が","を","に","へ","で","と","から","まで","より",
-  "の","や","か","ね","よ","わ","ぞ","ぜ",
+const particles_1 = [
+  "は","は","は","が","を","に","へ","で","と","から","まで","より",
+  "の","や","か","しか","も"
+]
+
+const particles_2 = [
+  "ね","よ","わ","ぞ","ぜ",
   "も","しか","だけ","ばかり","ほど",
   "ながら","つつ","ので","から",
   "について","によって",
@@ -66,7 +67,7 @@ const auxiliaries = [
   "ない","た",
   "う／よう","まい","たい",
   "そうだ","らしい","ようだ",
-  "べきだ","させる", "られる"
+  "べきだ","(さ)せる", "(ら)れる"
 ];
 
 const textList = [
@@ -76,11 +77,17 @@ const textList = [
   ...adjectives_i,
   ...adjectives_na,
   ...nouns,
+  ...nouns,
+  ...nouns,
   ...adverbs,
   ...adnominals,
-  ...particles,
-  ...particles,
-  ...particles,
+  ...particles_1,
+  ...particles_1,
+  ...particles_1,
+  ...particles_1,
+  ...particles_1,
+  ...particles_1,
+  ...particles_2,
   ...auxiliaries,
   ...auxiliaries
 ];
@@ -94,7 +101,7 @@ button.addEventListener("click", () => {
 
     // シャッフルして先頭10個を使う（「ほぼランダム」）
     const shuffled = [...textList].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, 10);
+    const selected = shuffled.slice(0, 15);
 
     selected.forEach(text => {
         const div = document.createElement("div");
